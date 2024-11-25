@@ -1,0 +1,19 @@
+<div class="max-w-md mx-auto bg-white rounded-lg shadow-md overflow-hidden p-6">
+  <h2 class="text-2xl font-bold text-gray-800 mb-4">Sign Up</h2>
+  <form action="/auth/signup" method="POST">
+    <div class="mb-4">
+      <label for="email" class="form-label">Email:</label>
+      <input type="email" name="email" required class="form-input">
+    </div>
+    <div class="mb-4">
+      <label for="password" class="form-label">Password:</label>
+      <input type="password" name="password" required class="form-input">
+    </div>
+    <button type="submit" class="btn btn-blue w-full">Sign Up</button>
+    
+    <% if (message) { %>
+      <p class="text-red-500 text-sm mt-4"><%= message %></p>
+    <% } %>
+  </form>
+  <p class="mt-4 text-sm text-gray-500">Already have an account? <a href="/auth/login" class="text-blue-500">Login here</a></p>
+</div>
